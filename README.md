@@ -18,7 +18,7 @@
   4. 배송휴일은 토, 일, 공휴일
 ------------------
 ```
-https://sqlitebrowser.org/dl/
+ https://sqlitebrowser.org/dl/
  sqlite 3.12.2
 ```
 
@@ -28,4 +28,9 @@ https://sqlitebrowser.org/dl/
   2. cd thepirate-test
   3. npm i
   4. node app.js
+  ```
+
+api 사용
+  ```
+  
   ```

@@ -30,7 +30,23 @@
   4. node app.js
   ```
 
-api 사용
+API 사용
+  ```
+  상품 추가 API post
+  http://localhost:3000/api/product
+  
+  상품 목록 조회 API get
+  http://localhost:3000/api/product
+  상품 상세조회 API get
+  http://localhost:3000/api/product/:id
+  해당 상품의 id값 
+  ex)http://localhost:3000/api/product/1
+<!--   수령일 선택 목록 API get -->
+<!--   http://localhost:3000/api/product/:id/delivery -->
+  상품 삭제 API delete
+  http://localhost:3000/api/product/:id
+  해당 상품의 id값
+  ex)http://localhost:3000/api/product/1
   ```
   
-  ```
+ 

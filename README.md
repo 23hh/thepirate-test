@@ -43,7 +43,7 @@ API 사용
   해당 상품의 id값 
   ex)http://localhost:3000/api/product/1
   
-<!--   수령일 선택 목록 API get --> 
+<!--   수령일 선택 목록 API get --> 고민중
 <!--   http://localhost:3000/api/product/:id/delivery -->
 
   상품 삭제 API delete

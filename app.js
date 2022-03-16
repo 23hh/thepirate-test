@@ -1,15 +1,26 @@
-const models = require("./models");
+const express = require("express");
+const { sequelize } = require("./models");
+const Router = require("./routes");
 
-app.listen(port, () => {
-  console.log("서버가 돌아가고 있습니다.");
-  models.sequelize
-    .sync()
-    .then(() => {
-      console.log("✓ DB 연결 성공");
-    })
-    .catch(function (err) {
-      console.error(err);
-      console.log("✗ DB 연결 에러");
-      process.exit();
-    });
+const app = express();
+app.use(express.static("public"));
+
+sequelize
+  .sync({ force: false })
+  .then(() => {
+    console.log("데이터베이스 연결됨.");
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+app.use("/api", Router);
+
+app.listen(3000, () => {
+  console.log("http server on 3000");
 });
+
+module.exports = app;
